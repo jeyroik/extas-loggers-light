@@ -1,0 +1,22 @@
+{
+    "name": "jeyroik/extas-loggers-light",
+    "description": "Extas light wrapper for logging",
+    "require": {
+      "monolog/monolog": "^3.3"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^9",
+      "phpstan/phpstan": "0.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "extas\\": "src/",
+        "tests\\": "tests/"
+      }
+    },
+    "scripts": {
+      "up": "vendor/bin/extas init && vendor/bin/extas install",
+      "test": "vendor/bin/phpunit --testdox --coverage-clover=coverage.xml --whitelist=src tests",
+      "stan": "vendor/bin/phpstan analyse -l 5 src"
+    }
+  }
