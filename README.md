@@ -1,6 +1,6 @@
 ![PHP Composer](https://github.com/jeyroik/extas-loggers-light/workflows/PHP%20Composer/badge.svg?branch=master)
 ![codecov.io](https://codecov.io/gh/jeyroik/extas-loggers-light/coverage.svg?branch=master)
-
+<a href="https://codeclimate.com/github/jeyroik/extas-loggers-light/maintainability"><img src="https://api.codeclimate.com/v1/badges/f95f72e790c0f90c264c/maintainability" /></a>
 [![Latest Stable Version](https://poser.pugx.org/jeyroik/extas-loggers-light/v)](//packagist.org/packages/jeyroik/extas-loggers-light)
 [![Total Downloads](https://poser.pugx.org/jeyroik/extas-loggers-light/downloads)](//packagist.org/packages/jeyroik/extas-loggers-light)
 [![Dependents](https://poser.pugx.org/jeyroik/extas-loggers-light/dependents)](//packagist.org/packages/jeyroik/extas-loggers-light)
@@ -29,7 +29,7 @@ class My implements ICanLog
     public function __construct()
     {
         $logger = new Logger('test');
-        $logger->pushHandler(new StreamHandler('/some/path', Level::Debug));
+        $logger->pushHandler(new StreamHandler('/some/path.log', Level::Debug));
         $this->setLogger($logger);
     }
 }
